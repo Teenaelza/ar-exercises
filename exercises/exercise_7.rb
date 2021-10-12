@@ -9,4 +9,8 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+@storename=$stdin.gets.chomp
+@store=Store.create({name:@storename})
+@store.errors.full_messages.each do
+|message|puts message
+end
